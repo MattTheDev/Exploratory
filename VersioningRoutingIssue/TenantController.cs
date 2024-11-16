@@ -13,7 +13,7 @@ namespace TestSolution.Api.Controllers
 
         // The versioned endpoint works.
         // The non-versioned endpoint throws a 400 error.
-        [ApiVersion("2.0")]
+        [ApiVersion("2.0")] // Note - If this is 1.0 .. this works. However, I had to have a 2.0 version for backwards compatibility. Don't ask lol
         [HttpPost]
         [Route("api/v{version:apiVersion}/[controller]/{stockpileId:int}/[action]")]
         [Route("api/[controller]/{stockpileId:int}/[action]")]
